@@ -4,8 +4,6 @@ This project is the backend API responsible for login state, permissions, and ac
 
 From a support perspective, this is the part of the system that determines whether a user is logged in, which account they are using, and what actions are allowed. The frontend makes requests; this API decides whether those requests succeed or fail.
 
----
-
 ## What This API Does
 
 This API handles:
@@ -16,8 +14,6 @@ This API handles:
 - Rejecting requests when a user is not logged in or not permitted
 
 If the UI appears correct but actions fail, the cause is often here.
-
----
 
 ## Issues This API Helps Explain
 
@@ -30,8 +26,6 @@ This API is central to diagnosing common customer-reported problems, including:
 - Logging out and back in temporarily resolves the issue
 
 These cases usually relate to session state, authentication, or permissions enforced by the API.
-
----
 
 ## Authentication and Session Behavior
 
@@ -95,8 +89,6 @@ When investigating an issue, common things to verify on the API side include:
 
 These checks help determine whether the problem is related to login state, permissions, or something outside the API.
 
----
-
 ## Relationship to the Frontend Application
 
 This API is used by a separate frontend application that users interact with directly.
@@ -112,8 +104,6 @@ The API:
 - Rejects requests when conditions are not met
 
 If the frontend and API disagree about a user’s state, the API response should be treated as the source of truth.
-
----
 
 ## Status and Intent
 
